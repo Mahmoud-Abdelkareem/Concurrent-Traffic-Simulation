@@ -1,4 +1,4 @@
-# Install script for directory: /home/workspace/L1_Project
+# Install script for directory: /home/workspace/Concurrent-Traffic-Simulation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/workspace/L1_Project/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/workspace/Concurrent-Traffic-Simulation/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

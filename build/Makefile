@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/workspace/L1_Project
+CMAKE_SOURCE_DIR = /home/workspace/Concurrent-Traffic-Simulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/workspace/L1_Project/build
+CMAKE_BINARY_DIR = /home/workspace/Concurrent-Traffic-Simulation/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/L1_Project/build/CMakeFiles /home/workspace/L1_Project/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Concurrent-Traffic-Simulation/build/CMakeFiles /home/workspace/Concurrent-Traffic-Simulation/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/L1_Project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Concurrent-Traffic-Simulation/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -204,6 +204,33 @@ src/Street.cpp.s:
 	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/Street.cpp.s
 .PHONY : src/Street.cpp.s
 
+src/TrafficLight.o: src/TrafficLight.cpp.o
+
+.PHONY : src/TrafficLight.o
+
+# target to build an object file
+src/TrafficLight.cpp.o:
+	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/TrafficLight.cpp.o
+.PHONY : src/TrafficLight.cpp.o
+
+src/TrafficLight.i: src/TrafficLight.cpp.i
+
+.PHONY : src/TrafficLight.i
+
+# target to preprocess a source file
+src/TrafficLight.cpp.i:
+	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/TrafficLight.cpp.i
+.PHONY : src/TrafficLight.cpp.i
+
+src/TrafficLight.s: src/TrafficLight.cpp.s
+
+.PHONY : src/TrafficLight.s
+
+# target to generate assembly for a file
+src/TrafficLight.cpp.s:
+	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/TrafficLight.cpp.s
+.PHONY : src/TrafficLight.cpp.s
+
 src/TrafficObject.o: src/TrafficObject.cpp.o
 
 .PHONY : src/TrafficObject.o
@@ -230,6 +257,33 @@ src/TrafficObject.s: src/TrafficObject.cpp.s
 src/TrafficObject.cpp.s:
 	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/TrafficObject.cpp.s
 .PHONY : src/TrafficObject.cpp.s
+
+src/TrafficSimulator-Final.o: src/TrafficSimulator-Final.cpp.o
+
+.PHONY : src/TrafficSimulator-Final.o
+
+# target to build an object file
+src/TrafficSimulator-Final.cpp.o:
+	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.o
+.PHONY : src/TrafficSimulator-Final.cpp.o
+
+src/TrafficSimulator-Final.i: src/TrafficSimulator-Final.cpp.i
+
+.PHONY : src/TrafficSimulator-Final.i
+
+# target to preprocess a source file
+src/TrafficSimulator-Final.cpp.i:
+	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.i
+.PHONY : src/TrafficSimulator-Final.cpp.i
+
+src/TrafficSimulator-Final.s: src/TrafficSimulator-Final.cpp.s
+
+.PHONY : src/TrafficSimulator-Final.s
+
+# target to generate assembly for a file
+src/TrafficSimulator-Final.cpp.s:
+	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.s
+.PHONY : src/TrafficSimulator-Final.cpp.s
 
 src/Vehicle.o: src/Vehicle.cpp.o
 
@@ -258,33 +312,6 @@ src/Vehicle.cpp.s:
 	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/Vehicle.cpp.s
 .PHONY : src/Vehicle.cpp.s
 
-src/main.o: src/main.cpp.o
-
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/traffic_simulation.dir/build.make CMakeFiles/traffic_simulation.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -303,15 +330,18 @@ help:
 	@echo "... src/Street.o"
 	@echo "... src/Street.i"
 	@echo "... src/Street.s"
+	@echo "... src/TrafficLight.o"
+	@echo "... src/TrafficLight.i"
+	@echo "... src/TrafficLight.s"
 	@echo "... src/TrafficObject.o"
 	@echo "... src/TrafficObject.i"
 	@echo "... src/TrafficObject.s"
+	@echo "... src/TrafficSimulator-Final.o"
+	@echo "... src/TrafficSimulator-Final.i"
+	@echo "... src/TrafficSimulator-Final.s"
 	@echo "... src/Vehicle.o"
 	@echo "... src/Vehicle.i"
 	@echo "... src/Vehicle.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 .PHONY : help
 
 
